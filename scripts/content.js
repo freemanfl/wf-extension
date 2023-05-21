@@ -40,24 +40,32 @@ container.id = "container";
 container.innerHTML = `
 <div id="container">
     <form id="wfForm">
-            <h3>Title</h3>
-            <input type="text" id="titleInput" />
-            <h3>Name</h3>
-            <input type="text" id="nameInput" />
-            <h3>WF Type</h3>
-            <div>
+            
+            <input type="text" id="titleInput" class="uc1" />
+   
+            <input type="text" id="nameInput" class="uc1" />
+         
+            <div id="radioContainer" class="uc1">
+             
+              <label for="promotion">Promotion
               <input type="radio" id="promotion" name="wf-type" checked />
-              <label for="promotion">Promotion</label>
+              </label>
+             
+              <label for="deletion">Deletion
               <input type="radio" id="deletion" name="wf-type" />
-              <label for="deletion">Deletion</label>
+              </label>
+              
+              <label for="assets">Assets
               <input type="radio" id="assets" name="wf-type" />
-              <label for="assets">Assets</label>
+              </label>
+              
+              <label for="rename">Rename
               <input type="radio" id="rename" name="wf-type" />
-              <label for="rename">Rename</label>
+              </label>
             </div>
-            <h3>Market</h3>
+       
             <div>
-              <select id="marketInput">
+              <select id="marketInput" class="uc1">
                 <option value="-1">None</option>
                 <option data-url="ATDE" value="austria">Ford of Austria</option>
                 <option data-url="BE" value="belgium">Ford of Belgium</option>
@@ -91,24 +99,24 @@ container.innerHTML = `
                 <option data-url="" value="internal">Internal</option>
                 <option data-url="" value="fcsd">FCSD Smart Media</option>
               </select>
-              <select id="marketInputCh">
+              <select id="marketInputCh" class="uc1">
               <option data-url="CHDE" value="chde">German</option>
               <option data-url="CHFR" value="chfr">French</option>
               <option data-url="CHIT" value="chit">Italian</option>
               </select>
-              <select id="marketInputBe">
+              <select id="marketInputBe" class="uc1">
               <option data-url="BENL">Flemish (NL)</option>
               <option data-url="BEFR">French</option>
               </select>
             </div>
-            <h3>Additional stuff</h3>
-            <div>
+            <h3 style="display: none;">Additional stuff</h3>
+            <div style="display: none;">
               <input type="checkbox" id="+del" name="+del" />
               <label for="+del">+ Deletion</label>
               <input type="checkbox" id="+ass" name="+ass" />
               <label for="+ass">+ Assets</label>
             </div>
-            <input id='submitButton' type="submit" value="Submit" style="padding: 10px">
+            <input id='submitButton' type="submit" value="Create Workflow" style="padding: 10px">
 </form>
 </div>
 `;
@@ -140,12 +148,44 @@ for (var i = 0; i < dropdown.length; i++) {
       .includes(dropdown[i].value)
   ) {
     dropdown.value = dropdown[i].value;
+    wf.url = dropdown[i].dataset.url;
+    if (dropdown.value == "switzerland") {
+      dropdownCh.style = "display: flex";
+      wf.url = "CH/CHDE";
+    }
+    if (dropdown.value == "belgium") {
+      dropdownBe.style = "display: flex";
+      wf.url = "BE/BENL";
+    }
   }
 }
 
-wf.url = dropdown.options[dropdown.selectedIndex].dataset.url;
-
 // In case default market is one of special ones, we need to be prepared to display extra options
+
+// listen for switzerland and belg submenu changes
+dropdownCh.addEventListener("change", () => {
+  if (dropdownCh.options[dropdownCh.selectedIndex].dataset.url == "CHDE") {
+    wf.url = "CH/" + dropdownCh.options[dropdownCh.selectedIndex].dataset.url;
+  }
+
+  if (dropdownCh.options[dropdownCh.selectedIndex].dataset.url == "CHFR") {
+    wf.url = "CH/" + dropdownCh.options[dropdownCh.selectedIndex].dataset.url;
+  }
+
+  if (dropdownCh.options[dropdownCh.selectedIndex].dataset.url == "CHIT") {
+    wf.url = "CH/" + dropdownCh.options[dropdownCh.selectedIndex].dataset.url;
+  }
+});
+
+dropdownBe.addEventListener("change", () => {
+  if (dropdownBe.options[dropdownBe.selectedIndex].dataset.url == "BEFR") {
+    wf.url = "BE/" + dropdownBe.options[dropdownBe.selectedIndex].dataset.url;
+  }
+
+  if (dropdownBe.options[dropdownBe.selectedIndex].dataset.url == "BENL") {
+    wf.url = "BE/" + dropdownBe.options[dropdownBe.selectedIndex].dataset.url;
+  }
+});
 
 // Belgium and Switzerland options visibility logic
 dropdown.addEventListener("change", () => {
@@ -153,36 +193,15 @@ dropdown.addEventListener("change", () => {
   dropdownBe.style = "display: none";
 
   if (dropdown.options[dropdown.selectedIndex].dataset.url == "CH") {
-    dropdownCh.addEventListener("change", () => {
-      if (dropdownCh.options[dropdownCh.selectedIndex].dataset.url == "CHDE") {
-        wf.url = dropdownCh.options[dropdownCh.selectedIndex].dataset.url;
-      }
-
-      if (dropdownCh.options[dropdownCh.selectedIndex].dataset.url == "CHFR") {
-        wf.url = dropdownCh.options[dropdownCh.selectedIndex].dataset.url;
-      }
-
-      if (dropdownCh.options[dropdownCh.selectedIndex].dataset.url == "CHIT") {
-        wf.url = dropdownCh.options[dropdownCh.selectedIndex].dataset.url;
-      }
-    });
     dropdownCh.style = "display: flex";
+    wf.url = "CH/CHDE";
     console.log("1");
     console.log(dropdown.options[dropdown.selectedIndex].dataset.url);
   }
 
   if (dropdown.options[dropdown.selectedIndex].dataset.url == "BE") {
-    dropdownBe.addEventListener("change", () => {
-      if (dropdownBe.options[dropdownBe.selectedIndex].dataset.url == "BEFR") {
-        wf.url = dropdownBe.options[dropdownBe.selectedIndex].dataset.url;
-      }
-
-      if (dropdownBe.options[dropdownBe.selectedIndex].dataset.url == "BENL") {
-        wf.url = dropdownBe.options[dropdownBe.selectedIndex].dataset.url;
-      }
-    });
-
     dropdownBe.style = "display: flex";
+    wf.url = "BE/BENL";
     console.log("2");
     console.log(dropdown.options[dropdown.selectedIndex].dataset.url);
   }
