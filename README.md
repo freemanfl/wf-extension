@@ -2,19 +2,24 @@
 
 What does it do?
 
-Creates workflows conveniently from the JIRA task page.
+Creates workflows conveniently from the JIRA task page. 
+
 
 How to install?
 
 At the top of this page click the green "Code" button, then click "Download ZIP" in the dropdown menu.
-DOwnload and unpack the ZIP archive.
+Dwnload and unpack the ZIP archive.
 In the browser click Menu -> Settings -> Extensions. 
 Check "Developer mode".
 Click "Load unpacked".
 Navigate to the unpacked ZIP archive folder
 
+
 How to use?
-After installation ticket pages will have an extra section
+
+After installation, ticket pages will have an extra section on the left side. Each time the ticket page is loaded, information about the ticket, such as title, name and market, gets automatically filled into this section. If something goes wrong and the autofilling fails, you still can edit the fields manually.
+
+
 Privacy Policy
 
 This Privacy Policy governs the use of the "Create Workflow" ("Extension") developed by Farid Mammadbayov ("Developer"). This policy outlines how the Extension collects, uses, and protects any information obtained during its usage.
