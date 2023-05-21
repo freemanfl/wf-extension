@@ -1,4 +1,20 @@
 # wf-extension
+
+What does it do?
+
+Creates workflows conveniently from the JIRA task page.
+
+How to install?
+
+At the top of this page click the green "Code" button, then click "Download ZIP" in the dropdown menu.
+DOwnload and unpack the ZIP archive.
+In the browser click Menu -> Settings -> Extensions. 
+Check "Developer mode".
+Click "Load unpacked".
+Navigate to the unpacked ZIP archive folder
+
+How to use?
+After installation ticket pages will have an extra section
 Privacy Policy
 
 This Privacy Policy governs the use of the "Create Workflow" ("Extension") developed by Farid Mammadbayov ("Developer"). This policy outlines how the Extension collects, uses, and protects any information obtained during its usage.
