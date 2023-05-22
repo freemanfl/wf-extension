@@ -34,6 +34,12 @@ Navigate to the unpacked ZIP archive folder
 
 ![image](https://github.com/freemanfl/wf-extension/assets/29132975/b53b93f5-4056-43eb-ab18-3b2d3ef612fc)
 
+Done! App now should appear on the extensions settings page
+
+![image](https://github.com/freemanfl/wf-extension/assets/29132975/848c4a48-8fcb-4e47-aefe-a3d08f20eb8e)
+
+
+
 How to use?
 
 After installation, ticket pages will have an extra section on the left side. Each time the ticket page is loaded, information about the ticket, such as title, name and market, gets automatically filled into this section. 
