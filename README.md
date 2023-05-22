@@ -12,7 +12,7 @@ At the top of this page click the green "Code" button, then click "Download ZIP"
 ![image](https://github.com/freemanfl/wf-extension/assets/29132975/626b197d-1291-42a0-8907-81686292b61e)
 
 
-Dwnload and unpack the ZIP archive.
+Download and unpack the ZIP archive.
 
 In the browser click Menu -> Settings
 
