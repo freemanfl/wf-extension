@@ -81,7 +81,7 @@ container.innerHTML = `
                 <option data-url="HUHU" value="hungary">Ford of Hungary</option>
                 <option data-url="IEIE" value="ireland">Ford of Ireland</option>
                 <option data-url="ITIT" value="italy">Ford of Italy</option>
-                <option data-url="LULU" value="luxembourn">Ford of Luxembourg</option>
+                <option data-url="LULU" value="luxembourg">Ford of Luxembourg</option>
                 <option data-url="NLNL" value="netherlands">Ford of Netherlands</option>
                 <option data-url="NONO" value="norway">Ford of Norway</option>
                 <option data-url="PLPL" value="poland">Ford of Poland</option>
