@@ -20,7 +20,7 @@
       "128": "images/icon-128.png"
     }
   },
-  "permissions": ["activeTab", "scripting", "tabs"],
+  "permissions": ["activeTab", "scripting"],
   "content_scripts": [
     {
       "js": ["scripts/content.js"],
