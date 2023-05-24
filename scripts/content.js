@@ -191,6 +191,7 @@ dropdownBe.addEventListener("change", () => {
 dropdown.addEventListener("change", () => {
   dropdownCh.style = "display: none";
   dropdownBe.style = "display: none";
+  wf.url = dropdown.options[dropdown.selectedIndex].dataset.url;
 
   if (dropdown.options[dropdown.selectedIndex].dataset.url == "CH") {
     dropdownCh.style = "display: flex";
