@@ -57,6 +57,10 @@ Use this on fresh tickets, don't use on tickets that already have workflows. If 
 
 
 
+################################################################################################
+################################################################################################
+################################################################################################
+
 Privacy Policy
 
 This Privacy Policy governs the use of the "Create Workflow" ("Extension") developed by Farid Mammadbayov ("Developer"). This policy outlines how the Extension collects, uses, and protects any information obtained during its usage.
