@@ -38,7 +38,6 @@ var sidebar = document.getElementsByClassName("aui-sidebar-wrapper")[0];
 var container = document.createElement("div");
 container.id = "container";
 container.innerHTML = `
-<div id="container">
     <form id="wfForm">
             
             <input type="text" id="titleInput" class="uc1" />
@@ -116,9 +115,10 @@ container.innerHTML = `
               <input type="checkbox" id="+ass" name="+ass" />
               <label for="+ass">+ Assets</label>
             </div>
-            <input id='submitButton' type="submit" value="Create Workflow" style="padding: 10px">
+            <input id='submitButton' type="submit" value="Create Workflow" style="padding: 10px;">
+            <div id="arrow">
+            </div>
 </form>
-</div>
 `;
 sidebar.insertBefore(container, footer);
 ///////////////////////////////////////////////////////////////////
@@ -274,5 +274,6 @@ function handleSubmit(e) {
 
   chrome.runtime.sendMessage(formData);
 }
+
 const form = document.getElementById("wfForm");
 form.addEventListener("submit", (e) => handleSubmit(e));

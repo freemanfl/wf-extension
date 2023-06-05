@@ -1,11 +1,35 @@
 #container {
-  width: 100%;
+  width: 20px;
+  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  left: 15px;
+  bottom: 5px;
+  transition: 0.9s;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid black;
 }
 
+#container:before {
+  content: "\00BB";
+  position: absolute;
+  left: 7px;
+  bottom: 2px;
+}
+
+#container:hover {
+  width: 280px;
+  height: 290px;
+}
+
+#container:hover:before {
+  content: "\00AB";
+}
 #container * {
   font-family: "Courier New", Courier, monospace !important;
   transition: 0.3s;
