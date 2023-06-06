@@ -115,7 +115,7 @@ container.innerHTML = `
               <input type="checkbox" id="+ass" name="+ass" />
               <label for="+ass">+ Assets</label>
             </div>
-            <input id='submitButton' class='uc1' type="submit" value="Create Workflow" style="padding: 10px;">
+            <input id='submitButton' class='uc1'f type="submit" value="Create Workflow" style="padding: 10px;">
             <div id="arrow">
             </div>
 </form>
@@ -196,15 +196,11 @@ dropdown.addEventListener("change", () => {
   if (dropdown.options[dropdown.selectedIndex].dataset.url == "CH") {
     dropdownCh.style = "display: flex";
     wf.url = "CH/CHDE";
-    console.log("1");
-    console.log(dropdown.options[dropdown.selectedIndex].dataset.url);
   }
 
   if (dropdown.options[dropdown.selectedIndex].dataset.url == "BE") {
     dropdownBe.style = "display: flex";
     wf.url = "BE/BENL";
-    console.log("2");
-    console.log(dropdown.options[dropdown.selectedIndex].dataset.url);
   }
 });
 
@@ -216,19 +212,16 @@ radios.forEach((radio) => {
       document.getElementById("nameInput").value = document
         .getElementById("nameInput")
         .value.replace("-deletion", "");
-      console.log("del yes");
     }
     if (document.getElementById("nameInput").value.includes("-assets")) {
       document.getElementById("nameInput").value = document
         .getElementById("nameInput")
         .value.replace("-assets", "");
-      console.log("del yes");
     }
     if (document.getElementById("nameInput").value.includes("-rename")) {
       document.getElementById("nameInput").value = document
         .getElementById("nameInput")
         .value.replace("-rename", "");
-      console.log("del yes");
     }
 
     if (radio.id == "deletion") {
@@ -240,8 +233,6 @@ radios.forEach((radio) => {
     if (radio.id == "rename") {
       document.getElementById("nameInput").value += "-rename";
     }
-
-    console.log("rokokos");
   });
 });
 
@@ -249,12 +240,10 @@ radios.forEach((radio) => {
 
 document.getElementById("+del").addEventListener("change", () => {
   wf.plusDeletion = !wf.plusDeletion;
-  console.log(wf.plusDeletion);
 });
 
 document.getElementById("+ass").addEventListener("change", () => {
   wf.plusAssets = !wf.plusAssets;
-  console.log(wf.plusAssets);
 });
 
 function handleSubmit(e) {
@@ -268,9 +257,6 @@ function handleSubmit(e) {
     deletion: false,
     assets: false,
   };
-
-  console.log(formData);
-  console.log("rokoko");
 
   chrome.runtime.sendMessage(formData);
 }

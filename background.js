@@ -10,11 +10,9 @@ var url =
 // Open created wf in a new tab
 
 chrome.runtime.onMessage.addListener(function (request) {
-  console.log(request);
-
   chrome.tabs.create({ url: url + request.url, active: true }, function (tab) {
     // Why do you query, when tab is already given?
-    console.log(request.url);
+
     chrome.scripting
       .executeScript({
         target: { tabId: tab.id },

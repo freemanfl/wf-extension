@@ -1,11 +1,8 @@
 var formData = {};
 
 chrome.runtime.onMessage.addListener(function (request) {
-  console.log(request);
   formData = request;
 });
-
-console.log("asodasd");
 
 window.addEventListener("load", function () {
   setTimeout(() => {
@@ -48,10 +45,9 @@ window.addEventListener("load", function () {
           break;
         }
       }
-      console.log(found);
+
       found.click();
-      console.log(formData);
-      console.log(formData.url);
+
       setTimeout(() => {
         window.location.assign(
           "https://wwwperf.brandeuauthorlb.ford.com/cf#/etc/workflow/packages/ESM/" +
