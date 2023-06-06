@@ -44,7 +44,7 @@ How to use?
 
 After installation, ticket pages will have an extra section on the left side. Each time the ticket page is loaded, information about the ticket, such as title, name and market, gets automatically filled into this section. 
 
-![screenshot](https://github.com/freemanfl/wf-extension/assets/29132975/571baac0-0ebe-44d8-8b3e-a71f499fc1ab)
+![image](https://github.com/freemanfl/wf-extension/assets/29132975/389d5dee-a98f-4e77-972e-6333cdb89373)
 
 If something goes wrong and the autofilling fails, you still can edit the fields manually.
 
@@ -52,9 +52,9 @@ If something goes wrong and the autofilling fails, you still can edit the fields
 
 App takes the info and creates a workflow for you.
 
-Remember to be logged into the ford aem thing.
-Use this on fresh tickets, don't use on tickets that already have workflows. If you did by accident, the app will create a WF with an extra zero in the adress, which you will probably have to go and clean up manually.
-
+_**Remember to be logged into the ford aem thing.
+Use this on fresh tickets, don't use on tickets that already have workflows. If you did by accident, the app will create a WF with an extra zero in the address, which you will probably have to go and clean up manually.**
+_
 
 
 ################################################################################################
