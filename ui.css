@@ -1,15 +1,18 @@
+* {
+  box-sizing: border-box;
+}
 #container {
-  width: 20px;
-  height: 20px;
+  width: 32px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
-  left: 15px;
+  left: 10px;
   bottom: 5px;
-  transition: 0.9s;
+  transition: 0.4s;
   background-color: #fff;
   border-radius: 5px;
   border: 1px solid black;
@@ -18,13 +21,18 @@
 #container:before {
   content: "\00BB";
   position: absolute;
-  left: 7px;
-  bottom: 2px;
+  left: 11px;
+  bottom: 1px;
+  font-size: 20px;
 }
 
 #container:hover {
-  width: 280px;
-  height: 290px;
+  width: 250px;
+  height: 305px;
+}
+
+#container:hover #wfForm {
+  display: flex;
 }
 
 #container:hover:before {
@@ -48,7 +56,6 @@ select {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 5px;
 }
 
 #container label:hover {
@@ -57,7 +64,7 @@ select {
 
 #wfForm {
   width: 100%;
-  display: flex;
+  display: none;
   align-items: center;
   gap: 5px;
   flex-direction: column;
@@ -73,17 +80,18 @@ select {
   cursor: pointer;
 }
 
+#submitButton {
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+}
 #radioContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  padding: 5px;
+
   gap: 5px;
   cursor: pointer;
-}
-#marketInputCh,
-#marketInputBe {
-  display: none;
 }
 
 #nameInput,
@@ -91,7 +99,23 @@ select {
 #marketInput {
   background-color: transparent;
   border: none;
-  padding-left: 5px;
+  padding-left: 2px;
+}
+
+#radioContainer label,
+#nameInput,
+#titleInput {
+  padding-left: 7px;
+  padding-right: 2px;
+}
+
+#radioContainer input {
+  width: 10px;
+  height: 10px;
+}
+#marketInputCh,
+#marketInputBe {
+  display: none;
 }
 
 #nameInput:focus,
@@ -102,7 +126,7 @@ select {
 
 .uc1 {
   min-height: 34px;
-  width: 260px;
+  width: 237px;
   background-color: transparent;
   border-radius: 5px;
 }

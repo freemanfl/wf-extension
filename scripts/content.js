@@ -115,7 +115,7 @@ container.innerHTML = `
               <input type="checkbox" id="+ass" name="+ass" />
               <label for="+ass">+ Assets</label>
             </div>
-            <input id='submitButton' type="submit" value="Create Workflow" style="padding: 10px;">
+            <input id='submitButton' class='uc1' type="submit" value="Create Workflow" style="padding: 10px;">
             <div id="arrow">
             </div>
 </form>
