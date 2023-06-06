@@ -44,7 +44,7 @@ How to use?
 
 After installation, ticket pages will have an extra section on the left side. Each time the ticket page is loaded, information about the ticket, such as title, name and market, gets automatically filled into this section. 
 
-![image](https://github.com/freemanfl/wf-extension/assets/29132975/cf870976-9a22-4408-ba30-c317675c225c)
+![image](https://github.com/freemanfl/wf-extension/assets/29132975/389d5dee-a98f-4e77-972e-6333cdb89373)
 
 If something goes wrong and the autofilling fails, you still can edit the fields manually.
 
