@@ -23,7 +23,7 @@
   "permissions": ["activeTab", "scripting"],
   "content_scripts": [
     {
-      "js": ["jquery-3.7.0.min.js", "scripts/content.js"],
+      "js": ["scripts/content.js"],
       "matches": ["https://jira.uhub.biz/browse/*"],
       "css": ["ui.css"]
     }
