@@ -29,7 +29,10 @@
 
 #container:hover {
   width: 250px;
-  height: 380px;
+  min-height: 200px;
+  height: auto;
+  padding-top: 15px;
+  padding-bottom: 25px;
 }
 
 #container:hover #wfForm {
@@ -133,4 +136,10 @@ select {
 }
 #marketInput:hover {
   background-color: #d1d4dc;
+}
+
+.inputsToGap {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }

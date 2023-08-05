@@ -63,7 +63,7 @@ container.innerHTML = `
               </label>
             </div>
        
-            <div>
+            <div class="inputsToGap">
               <select id="marketInput" class="uc1">
                 <option value="-1">None</option>
                 <option data-url="ATDE" value="austria">Ford of Austria</option>
