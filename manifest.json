@@ -1,6 +1,10 @@
 {
   "manifest_version": 3,
   "name": "Create Workflow",
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
   "description": "Create a workflow without leaving ticket page",
   "version": "2.1.3",
   "icons": {
@@ -20,7 +24,12 @@
       "128": "images/icon-128.png"
     }
   },
-  "permissions": ["activeTab", "scripting", "*://jira.uhub.biz/browse/*"],
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "*://jira.uhub.biz/browse/*"
+  ],
   "content_scripts": [
     {
       "js": ["scripts/content.js"],

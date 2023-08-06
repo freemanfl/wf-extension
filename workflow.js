@@ -59,6 +59,19 @@ window.addEventListener("load", function () {
           }
 
           found.click();
+          chrome.storage.sync.get(["likesColor"]).then((result) => {
+            if (result.likesColor) {
+              setTimeout(() => {
+                window.location.assign(
+                  "https://wwwperf.brandeuauthorlb.ford.com/cf#/etc/workflow/packages/ESM/" +
+                    formData.url +
+                    "/" +
+                    formData.esm +
+                    ".html"
+                );
+              }, 2000);
+            }
+          });
         }, 500);
       }, 2000);
     },
@@ -80,15 +93,3 @@ window.addEventListener("load", function () {
 //   }
 //   console.log(found2);
 //   found2.click();
-
-// setTimeout(() => {
-//   setTimeout(() => {
-//     window.location.assign(
-//       "https://wwwperf.brandeuauthorlb.ford.com/cf#/etc/workflow/packages/ESM/" +
-//         formData.url +
-//         "/" +
-//         formData.esm +
-//         ".html"
-//     );
-//   }, 1000);
-// }, 1000);

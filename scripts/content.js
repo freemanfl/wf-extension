@@ -117,6 +117,7 @@ container.innerHTML = `
             </div>
             <input id='submitButton' class='uc1'f type="submit" value="Create Workflow" style="padding: 10px;">
             <div id="arrow">
+         
             </div>
 </form>
 `;

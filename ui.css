@@ -1,22 +1,27 @@
 * {
   box-sizing: border-box;
 }
+
+#container * {
+  font-family: "Courier New", Courier, monospace !important;
+  transition: 0.2s;
+}
+
 #container {
   width: 32px;
   height: 30px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  overflow: hidden;
+
   position: relative;
   left: 10px;
   bottom: 5px;
-  transition: 0.4s;
+  transition: 0.2s;
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 3px;
   border: 1px solid black;
-  gap: 3px;
 }
 
 #container:before {
@@ -29,10 +34,16 @@
 
 #container:hover {
   width: 250px;
-  min-height: 200px;
-  height: auto;
-  padding-top: 15px;
-  padding-bottom: 25px;
+  height: 400px;
+}
+#wfForm {
+  display: none;
+  height: 100%;
+  align-items: center;
+  justify-content: start;
+  gap: 5px;
+  flex-direction: column;
+  padding-top: 5px;
 }
 
 #container:hover #wfForm {
@@ -41,10 +52,6 @@
 
 #container:hover:before {
   content: "\00AB";
-}
-#container * {
-  font-family: "Courier New", Courier, monospace !important;
-  transition: 0.3s;
 }
 
 #container label,
@@ -66,14 +73,6 @@ select {
   background-color: #d1d4dc;
 }
 
-#wfForm {
-  width: 100%;
-  display: none;
-  align-items: center;
-  gap: 5px;
-  flex-direction: column;
-}
-
 #titleInput:hover,
 #nameInput:hover,
 #marketInputr,
@@ -87,7 +86,7 @@ select {
 #submitButton {
   background-color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 #radioContainer {
   display: grid;
