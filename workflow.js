@@ -72,7 +72,7 @@ window.addEventListener("load", function () {
               }, 2000);
             }
           });
-        }, 500);
+        }, 1000);
       }, 2000);
     },
     1000,

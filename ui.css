@@ -34,7 +34,7 @@
 
 #container:hover {
   width: 250px;
-  height: 400px;
+  height: 320px;
 }
 #wfForm {
   display: none;
@@ -63,7 +63,7 @@ select {
   min-height: 34px;
   width: auto;
   background-color: transparent;
-  border-radius: 5px;
+  border-radius: 3px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -131,7 +131,7 @@ select {
   min-height: 34px;
   width: 237px;
   background-color: transparent;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 #marketInput:hover {
   background-color: #d1d4dc;
