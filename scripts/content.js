@@ -72,7 +72,7 @@ container.innerHTML = `
                 <option data-url="CSCZ" value="czech">Ford of Czech Republic</option>
                 <option data-url="DA_DK" value="denmark">Ford of Denmark</option>
                 <option data-url="" value="edm">Ford EDM</option>
-                <option data-url="" value="europe">Ford of Europe</option>
+                <option data-url="FOE" value="europe">Ford of Europe</option>
                 <option data-url="FIFI" value="finland">Ford of Finland</option>
                 <option data-url="FRFR" value="france">Ford of France</option>
                 <option data-url="DEDE" value="germany">Ford of Germany</option>
@@ -136,9 +136,14 @@ document.getElementById("titleInput").value =
   document.getElementById("summary-val").textContent;
 
 // Set name
-document.getElementById("nameInput").value = document
-  .getElementsByClassName("aui-nav-breadcrumbs")[0]
-  .children[1].children[0].textContent.slice(7, 17);
+
+document.getElementById("nameInput").value =
+  "ESM" +
+  document
+    .getElementsByClassName("aui-nav-breadcrumbs")[0]
+    .children[1].children[0].textContent.split("ESM")
+    .pop()
+    .split(" ")[0];
 
 // Set default market and wf url
 for (var i = 0; i < dropdown.length; i++) {
