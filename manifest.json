@@ -6,7 +6,7 @@
     "open_in_tab": false
   },
   "description": "Create a workflow without leaving ticket page",
-  "version": "2.1.8",
+  "version": "2.1.9",
   "icons": {
     "16": "images/icon-16.png",
     "32": "images/icon-32.png",
