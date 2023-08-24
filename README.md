@@ -4,42 +4,6 @@ What does it do?
 
 Creates workflows conveniently from the JIRA task page. 
 
-
-How to install?
-
-At the top of this page click the green "Code" button, then click "Download ZIP" in the dropdown menu.
-
-![image](https://github.com/freemanfl/wf-extension/assets/29132975/626b197d-1291-42a0-8907-81686292b61e)
-
-
-Download and unpack the ZIP archive.
-
-In the browser click Menu -> Settings
-
-![image](https://github.com/freemanfl/wf-extension/assets/29132975/e50bf01c-599c-4b57-8265-8467d0e5ef15)
-
--> Extensions.
-
-![image](https://github.com/freemanfl/wf-extension/assets/29132975/78be5811-7cf9-4805-a9c0-02c1e7c2c84f)
-
-Check "Developer mode".
-
-![image](https://github.com/freemanfl/wf-extension/assets/29132975/45753a33-09c4-4b96-9d68-3a2a00a65239)
-
-Click "Load unpacked".
-
-![image](https://github.com/freemanfl/wf-extension/assets/29132975/40ea0986-08b2-43d6-8319-ab9fc0ebf7ea)
-
-Navigate to the unpacked ZIP archive folder
-
-![image](https://github.com/freemanfl/wf-extension/assets/29132975/b53b93f5-4056-43eb-ab18-3b2d3ef612fc)
-
-Done! App now should appear on the extensions settings page
-
-![image](https://github.com/freemanfl/wf-extension/assets/29132975/848c4a48-8fcb-4e47-aefe-a3d08f20eb8e)
-
-
-
 How to use?
 
 After installation, ticket pages will have an extra section on the left side. Each time the ticket page is loaded, information about the ticket, such as title, name and market, gets automatically filled into this section. 
