@@ -10,16 +10,26 @@ var url =
 // Open created wf in a new tab
 
 chrome.runtime.onMessage.addListener(function (request) {
-  chrome.tabs.create({ url: url + request.url, active: true }, function (tab) {
-    // Why do you query, when tab is already given?
+  if (request === "showOptions") {
+    chrome.runtime.openOptionsPage();
+  } else if (request === "showInfo") {
+    console.log("showinfobg");
+    chrome.tabs.create({ url: chrome.runtime.getURL("help.html") });
+  } else {
+    chrome.tabs.create(
+      { url: url + request.url, active: true },
+      function (tab) {
+        // Why do you query, when tab is already given?
 
-    chrome.scripting
-      .executeScript({
-        target: { tabId: tab.id },
-        files: ["workflow.js"],
-      })
-      .then(() => {
-        chrome.tabs.sendMessage(tab.id, request);
-      });
-  });
+        chrome.scripting
+          .executeScript({
+            target: { tabId: tab.id },
+            files: ["workflow.js"],
+          })
+          .then(() => {
+            chrome.tabs.sendMessage(tab.id, request);
+          });
+      }
+    );
+  }
 });

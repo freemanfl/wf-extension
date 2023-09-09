@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>My Test Extension Options</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="options.css" />
+    <title>Create Workflow extension settings</title>
   </head>
   <body>
+    <h1>Settings</h1>
     <label>
-      <input type="checkbox" id="like" checked="checked" />
-      Navigate to the new workflow upon its creation
+      <input type="checkbox" id="newTab" />
+      Automatically navigate to the newly created workflow
     </label>
-
     <div id="status"></div>
     <button id="save">Save</button>
-
-    <script src="options.js"></script>
+    <script src="scripts/options.js"></script>
   </body>
 </html>

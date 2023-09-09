@@ -142,3 +142,32 @@ select {
   flex-direction: column;
   gap: 5px;
 }
+
+#buttons-container {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  bottom: 4px;
+  right: 12px;
+}
+
+#settingss,
+#infoo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+#settingss:hover,
+#infoo:hover {
+  background-color: #d1d4dc;
+}
+
+#settingss {
+  padding-top: 2px;
+}

@@ -6,7 +6,7 @@
     "open_in_tab": false
   },
   "description": "Create a workflow without leaving ticket page",
-  "version": "2.1.9",
+  "version": "2.2.0",
   "icons": {
     "16": "images/icon-16.png",
     "32": "images/icon-32.png",
@@ -39,5 +39,11 @@
   ],
   "host_permissions": [
     "https://wwwperf.brandeuauthorlb.ford.com/miscadmin#/etc/workflow/packages/ESM/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["./images/setting.png", "./images/information.png"],
+      "matches": ["https://jira.uhub.biz/*"]
+    }
   ]
 }

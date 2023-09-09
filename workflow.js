@@ -59,8 +59,8 @@ window.addEventListener("load", function () {
           }
 
           found.click();
-          chrome.storage.sync.get(["likesColor"]).then((result) => {
-            if (result.likesColor) {
+          chrome.storage.sync.get("newTab", function (data) {
+            if (data.newTab) {
               setTimeout(() => {
                 window.location.assign(
                   "https://wwwperf.brandeuauthorlb.ford.com/cf#/etc/workflow/packages/ESM/" +

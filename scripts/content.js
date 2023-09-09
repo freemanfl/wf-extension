@@ -119,11 +119,22 @@ container.innerHTML = `
             <div id="arrow">
          
             </div>
+            <div id="buttons-container">
+             <div id="settingss">&#9881;</div>
+             <div id="infoo">&#x2139;</div>
+            </div>
+            
 </form>
 `;
 sidebar.insertBefore(container, footer);
 ///////////////////////////////////////////////////////////////////
+document.querySelector("#settingss").addEventListener("click", function () {
+  chrome.runtime.sendMessage("showOptions");
+});
 
+document.querySelector("#infoo").addEventListener("click", function () {
+  chrome.runtime.sendMessage("showInfo");
+});
 // Now we set default states
 
 // grab market inputs
